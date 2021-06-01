@@ -7,10 +7,10 @@ import AllDestinations from "./Components/AllDestinations";
 import AddDestination from "./Components/AddDestination";
 import NewDestinationsSubscription from './Queries/NewDestinationsSubscription';
 
-import AWSAppSyncClient from "aws-appsync";
 import { Rehydrated } from 'aws-appsync-react';
-import { AUTH_TYPE } from "aws-appsync/lib/link/auth-link";
-import { graphql, ApolloProvider, compose } from 'react-apollo';
+import AWSAppSyncClient, { AUTH_TYPE } from "aws-appsync";
+import { graphql, ApolloProvider } from 'react-apollo';
+import {flowRight as compose} from 'lodash';
 import * as AWS from 'aws-sdk';
 import AppSync from './aws-exports.js';
 import AllDestinationsQuery from './Queries/AllDestinationsQuery';
